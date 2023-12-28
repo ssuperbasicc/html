@@ -1,0 +1,8 @@
+FROM httpd:2.4.58-alpine3.18
+
+ENV APACHE2_SERVICE_DIR /usr/local/apache2/htdocs/
+ENV PORT 80
+
+COPY . ${APACHE2_SERVICE_DIR}
+
+EXPOSE ${PORT}
